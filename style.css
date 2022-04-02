@@ -1,0 +1,70 @@
+
+body {
+font-family: 'BIZ UDPMincho', serif;
+}
+
+button {
+  font-family: 'BIZ UDPMincho', serif;
+  border-color: gray;
+  border-radius: 20%;
+}
+
+.card {
+  background-color: wheat;
+  box-shadow: .25em .25em 5px 0px rgba(108, 105, 105, 0.56);
+  border: 1em;
+  border-color: black;
+  text-align: center;
+  align-items: center;
+}
+
+.individual {
+  width: 30%;
+  padding: 1em;
+  border-radius: 1em;
+  position: relative;
+  display: inline-block;
+  margin-top: .5em;
+}
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  left: 85%;
+}
+
+.cat-info {
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  width: 90%;
+}
+
+.cat-image {
+  max-width: 80%;
+  padding: .75em;
+  align-self: center;
+}
+
+.controls-container {
+  text-align: center;
+}
+/* .card{
+  background-color: var(--white);
+  padding: 1em;
+  box-shadow: var( --shadow);
+  border-radius: var(--corners);
+ 
+  margin: auto; /*centers card in page
+  
+} */
+
+/* UTILITY CLASSES */
+
+.justify-center {
+  justify-content: center;
+}
+
+.p1em {
+  padding: 1em;
+}
