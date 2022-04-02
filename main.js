@@ -8,7 +8,7 @@ function addKitten(event) {
 
   if (kittenName) {
     if (validateName = true) {
-      kittens.push({id: generateId(), name: kittenName, mood: 'Cautious', affection: 50});
+      kittens.push({id: generateId().toString(), name: kittenName, mood: 'Cautious', affection: 50});
       document.getElementById('name-form').reset();
       saveItem(kittyKey, kittens); // only one array of kittens possible with implementation
       drawKittens();
@@ -35,7 +35,7 @@ function drawKittens() {
     template += 
     `<span id="instance-template">
     <div class="card individual">Name: ${cat.name}
-     <span onclick='removeKitten(${cat.id}close)' id='${cat.id}close' class="close-button">[X]</span>
+     <span onclick='removeKitten(event) id='${cat.id}' class="close-button">[X]</span>
       <div>
         <img class="cat-image" src="" alt="">
       </div>
@@ -53,7 +53,8 @@ function drawKittens() {
         </table>
       </div>
     </div>
-  </span>`
+  </span>`;
+  console.log(cat.name);
   });
 
   document.getElementById('kitty-display').innerHTML = template
@@ -64,19 +65,21 @@ function saveItem(key, value) {
   console.log("saved to key " + key);
 }
 
-function loadItem(key, storageVar) {
+function loadItem(key) {
   let localData = JSON.parse(window.localStorage.getItem(key));
   if(localData) {
-    storageVar = localData;
+    kittens = localData;
     console.log('loaded key ' + key);
+    console.log(kittens);
   }
   else {
     console.log("nothing to find??");
   }
 }
 
-function removeKitten(id) { // needs the ID of each individual cat to be the database id + some tag
-  let arrayIndex = id; // some operation to remove the tag at the end of the ID
+function removeKitten(event) { // needs the ID of each individual cat to be the database id + some tag
+  let arrayIndex = event.target.id;
+  console.log(arrayIndex)
   kittens.splice(kittens.findIndex(arrayIndex), 1); // finds ID, goes to ID and removes that ID from the array
   console.log('removed a kitten');
 
@@ -102,5 +105,5 @@ drawKittens();
  * @returns {string}
  */
  function generateId() {
-  return Math.floor(Math.random() * 10000000) + "-" + Math.floor(Math.random() * 10000000)
+  return Math.floor(Math.random() * 10000000) + Math.floor(Math.random() * 10000000)
 }
