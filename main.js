@@ -54,11 +54,6 @@ function pet(event) { //user presses button 'pet'
       petCount++;
       console.log(petCount);
 
-      if (petCount == 5) {
-        treat(event);
-        petCount = 0;
-      }
-
       drawKittens();
 
       break;

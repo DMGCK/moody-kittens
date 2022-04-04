@@ -24,6 +24,11 @@ button {
   padding-bottom: 20px;
 }
 
+.entry {
+  margin-bottom: 1em;
+  padding-top: 1.5em;
+}
+
 .individual {
   background-color: var(--cat-primary);
   width: 30%;
@@ -95,6 +100,12 @@ button {
 } */
 
 /* UTILITY CLASSES */
+
+.auto-margin {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 .justify-center {
   justify-content: center;
