@@ -1,12 +1,16 @@
-
+:root {
+  --cat-primary: rgb(184, 96, 96);
+  --background-color: rgb(97, 97, 97);
+}
 body {
 font-family: 'BIZ UDPMincho', serif;
+background-color: var(--background-color);
 }
 
 button {
   font-family: 'BIZ UDPMincho', serif;
   border-color: gray;
-  border-radius: 20%;
+  border-radius: 10px;
 }
 
 .card {
@@ -16,9 +20,12 @@ button {
   border-color: black;
   text-align: center;
   align-items: center;
+  border-radius: 15px;
+  padding-bottom: 20px;
 }
 
 .individual {
+  background-color: var(--cat-primary);
   width: 30%;
   padding: 1em;
   border-radius: 1em;
@@ -26,6 +33,7 @@ button {
   display: inline-block;
   margin-top: .5em;
 }
+
 
 .close-button {
   cursor: pointer;
@@ -49,12 +57,39 @@ button {
 .controls-container {
   text-align: center;
 }
+
+.negative {
+  animation: individual-status-negative 2s ease-in-out infinite;
+}
+
+.positive {
+  animation: individual-status-positive 2s ease-in-out infinite;
+}
+
+@keyframes individual-status-negative  {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: var(--cat-primary);
+  }
+}
+
+@keyframes individual-status-positive  {
+  0%, 100% {
+    background-color: rgb(38, 205, 0);
+  }
+  50% {
+    background-color: var(--cat-primary);
+  }
+}
+
 /* .card{
   background-color: var(--white);
   padding: 1em;
   box-shadow: var( --shadow);
   border-radius: var(--corners);
- 
+  
   margin: auto; /*centers card in page
   
 } */
@@ -67,4 +102,9 @@ button {
 
 .p1em {
   padding: 1em;
+}
+
+.hidden{
+  display: none; /* do not use important often or at all*/
+
 }

@@ -14,17 +14,11 @@ Draw the kittens list
 Draw the kittens list on refresh
 Requirements:
 
- A Kitten's name and mood must be visible for the user
+
 
  A Kitten's mood must affect visually the appearance of the kitten
 
 
-
- Kittens can be deleted
- Kittens have at least two buttons that affect the kitten's mood in different ways
- Kitten's and their mood persist through page reloads
- Kitten's with the same name as an already present kitten cannot be added
- Kittens are visible when the page reloads
 
  completed:
   Create a form used to add a Kitten
@@ -43,3 +37,9 @@ Requirements:
  Add Kitten form clears when submitted
  Add Kitten form submission does not reload the page
  Kittens are stored in local storage
+ 
+ Kitten's and their mood persist through page reloads
+ Kittens can be deleted
+  Kittens are visible when the page reloads
+   A Kitten's name and mood must be visible for the user
+    Kitten's with the same name as an already present kitten cannot be added
